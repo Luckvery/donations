@@ -13,8 +13,8 @@ namespace :db do
                  password_confirmation: "foobar",
                  admin: true)
 
-    User.create!(name: "Micheal Hartl",
-                 email: "example@railstutorial.org",
+    User.create!(name: "Chris Piazza",
+                 email: "chris@icapitalnetwork.com",
                  password: "foobar",
                  password_confirmation: "foobar",
                  admin: true)

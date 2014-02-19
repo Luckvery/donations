@@ -71,7 +71,7 @@ p {
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding-top: 1px;
   font-weight: bold;
   line-height: 1;
   &:hover {
@@ -83,7 +83,6 @@ p {
 /* footer */
 
 footer {
-  margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
   color: $grayLight;
@@ -187,4 +186,14 @@ input {
       border-bottom: 1px solid $grayLighter;
     }
   }
+}
+// home page
+.cover {
+   background-image: url(image-path('cover.jpg'));
+   background-size: 100%;
+}
+
+.cover_content{
+margin-top: 30px;
+  opacity: 0.75;
 }

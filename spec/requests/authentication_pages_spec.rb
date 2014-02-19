@@ -48,11 +48,7 @@ describe "Authentication" do
       specify { expect(full_title("")).not_to match(/\|/)}
     end
 
-    describe "logged in and submits signup page" do
-      pending
-      # before { visit users_path }
-      # specify { expect(response).to redirect_to(root_url) }
-    end
+
 
     describe "followed by signout" do
       before { click_link "Sign out" }

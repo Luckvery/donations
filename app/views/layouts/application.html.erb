@@ -8,15 +8,18 @@
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %>
   </head>
-  <body>
-    <%= render 'layouts/header' %>
-    <div class="container">
-      <% flash.each do |key, value| %>
-        <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+  <% if yield(:title) == '' %>
+    <body class="cover">
+    <% else %>
+      <body>
       <% end %>
-      <%= yield %>
+      <%= render 'layouts/header' %>
+      <div class="container cover_content">
+        <% flash.each do |key, value| %>
+          <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+        <% end %>
+        <%= yield %>
+      </div>
       <%= render 'layouts/footer' %>
-      <%= debug(params) if Rails.env.development? %>
-    </div>
-  </body>
-</html>
+    </body>
+  </html>
